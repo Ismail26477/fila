@@ -1,20 +1,25 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
 import { company, nav } from "@/lib/site";
 import { ButtonLink } from "./Button";
 
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-navy-deep text-primary-foreground">
-      <div className="pointer-events-none absolute inset-0 grid-lines opacity-40" aria-hidden="true" />
-      <div className="pointer-events-none absolute -top-24 right-0 size-96 opacity-40" aria-hidden="true" />
+      <div
+        className="pointer-events-none absolute inset-0 grid-lines opacity-40"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -top-24 right-0 size-96 opacity-40"
+        aria-hidden="true"
+      />
 
       <div className="container-x relative py-16 md:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.7fr_1.2fr]">
           <div className="max-w-sm">
             <img
-              src={logo.url}
+              src="/filament-logo.png"
               alt={`${company.name} logo`}
               width={740}
               height={270}

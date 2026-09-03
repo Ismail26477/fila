@@ -13,6 +13,8 @@ import { Testimonials } from "@/components/site/Testimonials";
 import { products } from "@/data/products";
 import { company } from "@/lib/site";
 
+const brandLogo = "/filament-logo.png";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -86,7 +88,10 @@ function Home() {
 
       {/* Introduction */}
       <section className="section-y relative overflow-hidden bg-background">
-        <div className="pointer-events-none absolute inset-0 grid-lines-dark opacity-70" aria-hidden="true" />
+        <div
+          className="pointer-events-none absolute inset-0 grid-lines-dark opacity-70"
+          aria-hidden="true"
+        />
         <div className="container-x relative grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <Reveal className="relative">
             <div className="overflow-hidden rounded-3xl">
@@ -99,9 +104,7 @@ function Home() {
                 className="aspect-4/5 w-full object-cover"
               />
             </div>
-            <div
-              className="absolute -bottom-8 -left-6 hidden rounded-2xl border border-border bg-card p-6 shadow-lift lg:block"
-            >
+            <div className="absolute -bottom-8 -left-6 hidden rounded-2xl border border-border bg-card p-6 shadow-lift lg:block">
               <p className="text-xs font-semibold tracking-[0.2em] text-slate-blue uppercase">
                 Incorporated in
               </p>
@@ -123,10 +126,9 @@ function Home() {
             <Reveal delay={0.1}>
               <div className="mt-7 space-y-5 text-base leading-relaxed text-slate-blue">
                 <p>
-                  {company.name} is an Indian life-sciences company working in active
-                  pharmaceutical ingredients and intermediates. The company is registered in Nagpur,
-                  Maharashtra, with its manufacturing address at the IIE Growth Centre in Kotdwar,
-                  Uttarakhand.
+                  {company.name} is an Indian life-sciences company working in active pharmaceutical
+                  ingredients and intermediates. The company is registered in Nagpur, Maharashtra,
+                  with its manufacturing address at the IIE Growth Centre in Kotdwar, Uttarakhand.
                 </p>
                 <p>
                   Our approach is deliberately simple: define the chemistry precisely, control the
@@ -150,7 +152,10 @@ function Home() {
 
       {/* Why Filament */}
       <section className="section-y relative overflow-hidden bg-navy text-primary-foreground">
-        <div className="pointer-events-none absolute inset-0 grid-lines opacity-40" aria-hidden="true" />
+        <div
+          className="pointer-events-none absolute inset-0 grid-lines opacity-40"
+          aria-hidden="true"
+        />
         <div
           className="pointer-events-none absolute top-1/3 -left-32 size-[26rem] opacity-40"
           aria-hidden="true"
@@ -270,7 +275,7 @@ function Home() {
           </div>
 
           <Reveal delay={0.1} className="lg:pt-16">
-            <div className="overflow-hidden rounded-3xl">
+            <div className="relative overflow-hidden rounded-3xl">
               <img
                 src={homeSupport}
                 alt="Technician in a branded apron inspecting stainless steel process equipment"
@@ -279,6 +284,9 @@ function Home() {
                 height={1500}
                 className="aspect-4/5 w-full object-cover md:aspect-3/4"
               />
+              <div className="pointer-events-none absolute left-[38%] top-[57%] w-[20%] -translate-x-1/2 -translate-y-1/2 rounded-sm bg-white/90 p-2 shadow-sm sm:p-3">
+                <img src={brandLogo} alt="" aria-hidden="true" className="h-auto w-full" />
+              </div>
             </div>
           </Reveal>
         </div>
@@ -305,10 +313,7 @@ function Home() {
         </div>
       </section>
 
-      <CtaBanner
-        image={ctaHome}
-        alt="Illuminated pharmaceutical manufacturing plant at night"
-      />
+      <CtaBanner image={ctaHome} alt="Illuminated pharmaceutical manufacturing plant at night" />
     </>
   );
 }
