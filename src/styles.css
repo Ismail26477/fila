@@ -6,7 +6,7 @@
 
 /*
  * FILAMENT LIFESCIENCES — design system
- * Brand palette: teal #00C3B0, deep teal ink, soft mint surfaces,
+ * Brand palette: teal #08BDB0, deep teal ink, soft mint surfaces,
  * and white #FFFFFF.
  */
 
@@ -63,7 +63,7 @@
   --ink-deep: #052c34;
   --ink-muted: #39606b;
   /* teal accent used across dark and light surfaces */
-  --brand-teal: #00c3b0;
+  --brand-teal: #08bdb0;
   --mint: #dffaf7;
   --surface: #f1fcfa;
 
